@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hEY-jR-fvb">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Game Details-->
+        <scene sceneID="771-Q5-nyw">
+            <objects>
+                <viewController id="hEY-jR-fvb" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="etz-fM-uqH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="XpH-8G-3Ys">
+                                <rect key="frame" x="5" y="64" width="365" height="603"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Game Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7ws-7W-Ffk">
+                                        <rect key="frame" x="0.0" y="0.0" width="365" height="603"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="3G5-ES-45O" firstAttribute="bottom" secondItem="XpH-8G-3Ys" secondAttribute="bottom" id="3EF-LU-UoA"/>
+                            <constraint firstItem="XpH-8G-3Ys" firstAttribute="top" secondItem="3G5-ES-45O" secondAttribute="top" id="591-j3-MJ6"/>
+                            <constraint firstItem="3G5-ES-45O" firstAttribute="trailing" secondItem="XpH-8G-3Ys" secondAttribute="trailing" constant="5" id="Tly-ks-GvH"/>
+                            <constraint firstItem="XpH-8G-3Ys" firstAttribute="leading" secondItem="3G5-ES-45O" secondAttribute="leading" constant="5" id="ZcA-zY-ZHS"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="3G5-ES-45O"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Game Details" id="4jw-dr-eH5"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XsG-b3-4A3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="72.799999999999997" y="172.26386806596702"/>
+        </scene>
+    </scenes>
+</document>
