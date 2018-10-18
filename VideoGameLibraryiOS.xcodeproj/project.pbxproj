@@ -18,6 +18,7 @@
 		C9549EE5217658F20005023B /* AddNewStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9549EE4217658F20005023B /* AddNewStoryboard.storyboard */; };
 		C9549EE8217775F70005023B /* AddGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9549EE7217775F70005023B /* AddGameViewController.swift */; };
 		C9549EEA2177AB440005023B /* GameManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9549EE92177AB440005023B /* GameManager.swift */; };
+		C98758C62178BFE60068D5FE /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98758C52178BFE60068D5FE /* Utilities.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		C9549EE4217658F20005023B /* AddNewStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddNewStoryboard.storyboard; sourceTree = "<group>"; };
 		C9549EE7217775F70005023B /* AddGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddGameViewController.swift; sourceTree = "<group>"; };
 		C9549EE92177AB440005023B /* GameManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameManager.swift; sourceTree = "<group>"; };
+		C98758C52178BFE60068D5FE /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 				C9549EC2217508AF0005023B /* AppDelegate.swift */,
 				C9549EC9217508B00005023B /* Assets.xcassets */,
 				C9549EE92177AB440005023B /* GameManager.swift */,
+				C98758C52178BFE60068D5FE /* Utilities.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -197,6 +200,7 @@
 			files = (
 				C9549EE8217775F70005023B /* AddGameViewController.swift in Sources */,
 				C9549EEA2177AB440005023B /* GameManager.swift in Sources */,
+				C98758C62178BFE60068D5FE /* Utilities.swift in Sources */,
 				C9549EC5217508AF0005023B /* GameListViewController.swift in Sources */,
 				C9549ED5217621780005023B /* Game.swift in Sources */,
 				C9549EC3217508AF0005023B /* AppDelegate.swift in Sources */,

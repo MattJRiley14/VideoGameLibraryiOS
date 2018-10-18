@@ -14,6 +14,7 @@ class GameManager {
     
     //Creating a private initializer so that no instances of this class can be made anywhere else
     private init() {
+        gameArray[0].dueDate = Date()
     }
     
     //Array of games that will be used throughout the application
@@ -32,6 +33,11 @@ class GameManager {
     //Function to add a game
     func addGame(game: Game) {
         gameArray.append(game)
+    }
+    
+    //Function to remove a game
+    func removeGame(at index: Int) {
+        gameArray.remove(at: index)
     }
 }
 
