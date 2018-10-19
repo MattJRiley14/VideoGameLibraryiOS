@@ -12,6 +12,7 @@ class GameListViewController: UITableViewController {
         
     @IBOutlet var gameListTableView: UITableView!
     
+    var currentGame: Game!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +23,13 @@ class GameListViewController: UITableViewController {
         super.viewWillAppear(animated)
         
         gameListTableView.reloadData()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? EditGameViewController {
+            //We need to pass through the Game that we'll be editing.
+            destination.gameToEdit = currentGame
+        }
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -64,10 +72,28 @@ class GameListViewController: UITableViewController {
             //Remove the game at the current index from our game array
             GameManager.sharedInstance.removeGame(at: indexPath.row)
             //Delete the row from the table view at the current index path
-            tableView.deleteRows(at: [indexPath], with: .bottom)
+            tableView.deleteRows(at: [indexPath], with: .fade)
         }
         
-        return [deleteAction]
+        let gameForIndex = GameManager.sharedInstance.getGame(at: indexPath.row)
+        
+        let title = gameForIndex.checkedIn ? "Check Out" : "Check In"
+        
+        let checkOutOrInAction = UITableViewRowAction(style: .normal, title: title) { _, _ in
+            GameManager.sharedInstance.checkGameInOrOut(at: indexPath.row)
+            tableView.reloadRows(at: [indexPath], with: .fade)
+        }
+        
+        let showEditScreenAction = UITableViewRowAction(style: .normal, title: "Edit") { _, _ in
+            self.currentGame = GameManager.sharedInstance.getGame(at: indexPath.row)
+            self.performSegue(withIdentifier: "showEditGameScreen", sender: self)
+        }
+        
+        deleteAction.backgroundColor = UIColor.red
+        showEditScreenAction.backgroundColor = UIColor.lightGray
+        checkOutOrInAction.backgroundColor = UIColor.darkGray
+        
+        return [deleteAction, showEditScreenAction, checkOutOrInAction]
     }
     
     @IBAction func unwindToGameList(segue: UIStoryboardSegue) {}

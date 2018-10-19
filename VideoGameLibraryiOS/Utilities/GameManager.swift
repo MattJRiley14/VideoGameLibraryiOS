@@ -18,7 +18,7 @@ class GameManager {
     }
     
     //Array of games that will be used throughout the application
-    private var gameArray = [Game(title: "Mario Kart", description: "", genre: "Racing", rating: "E"), Game(title: "Fruit Ninja", description: "", genre: "Arcade", rating: "E"), Game(title: "EA Sports UFC", description: "", genre: "Sports", rating: "T"), Game(title: "Worms", description: "", genre: "Strategy", rating: "E"), Game(title: "Power Pete", description: "", genre: "Shoot Em' Up", rating: "E"), Game(title: "Gears of War", description: "", genre: "Third Person Shooter", rating: "M"), Game(title: "Lego: Lord of the Rings", description: "", genre: "Action-Adventure", rating: "E")]
+    private var gameArray = [Game(title: "Mario Kart", description: "A great game to play at your Grandma's house with your brothers", genre: "Racing", rating: "E"), Game(title: "Fruit Ninja", description: "A great game to play at DisneyWorld with your wife", genre: "Arcade", rating: "E"), Game(title: "EA Sports UFC", description: "A great game to play at your brother's house with your brothers", genre: "Sports", rating: "T"), Game(title: "Worms", description: "A great game to play against your brother", genre: "Strategy", rating: "E"), Game(title: "Power Pete", description: "A great game to play on your computer for your entire childhood", genre: "Shoot Em' Up", rating: "E"), Game(title: "Gears of War", description: "A great game to play for hours on horde mode with your brothers", genre: "Third Person Shooter", rating: "M"), Game(title: "Lego: Lord of the Rings", description: "A great game to play with your wife for your birthday", genre: "Action-Adventure", rating: "E")]
     
     //Function to get the number of games we have
     func getGameCount () -> Int {
@@ -38,6 +38,20 @@ class GameManager {
     //Function to remove a game
     func removeGame(at index: Int) {
         gameArray.remove(at: index)
+    }
+    
+    //Function to check a game in or out
+    func checkGameInOrOut(at index: Int) {
+        let gameForIndex = gameArray[index]
+        gameForIndex.checkedIn = !gameForIndex.checkedIn
+        
+        if gameForIndex.checkedIn {
+            //Remove any existing due date
+            gameForIndex.dueDate = nil
+        } else {
+            //Add a new due date, since the game has just been checked out
+            gameForIndex.dueDate = Calendar.current.date(byAdding: .day, value: 14, to: Date())
+        }
     }
 }
 

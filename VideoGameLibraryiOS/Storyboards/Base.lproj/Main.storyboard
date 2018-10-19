@@ -84,7 +84,7 @@
                                     <outlet property="ratingLabel" destination="1h5-ie-NUE" id="9Px-e5-bGR"/>
                                     <outlet property="statusView" destination="oda-6D-aRa" id="I6w-Uh-oeY"/>
                                     <outlet property="titleLabel" destination="fOq-82-3wo" id="3Rk-v4-vAH"/>
-                                    <segue destination="tCU-Gz-5zh" kind="show" id="m2X-rA-as8"/>
+                                    <segue destination="tCU-Gz-5zh" kind="show" id="McJ-Cd-ci4"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -102,6 +102,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="gameListTableView" destination="1ah-Du-yNi" id="iGo-M0-mp4"/>
+                        <segue destination="yP2-bY-fkr" kind="show" identifier="showEditGameScreen" id="JL7-M7-lR5"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oSl-Th-dce" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -114,7 +115,15 @@
                 <viewControllerPlaceholder storyboardName="GameDetails" id="tCU-Gz-5zh" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P8s-qa-HRA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-300" y="170"/>
+            <point key="canvasLocation" x="132" y="-279"/>
+        </scene>
+        <!--EditGame-->
+        <scene sceneID="SXb-F5-DId">
+            <objects>
+                <viewControllerPlaceholder storyboardName="EditGame" id="yP2-bY-fkr" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kkl-wX-2Xh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="118" y="-78"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="z4P-KM-vxx">
@@ -138,7 +147,7 @@
                 <viewControllerPlaceholder storyboardName="AddNewStoryboard" id="4Kb-Vn-LjU" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wPs-Dy-fdW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="167" y="-549"/>
+            <point key="canvasLocation" x="166" y="-495"/>
         </scene>
     </scenes>
 </document>
