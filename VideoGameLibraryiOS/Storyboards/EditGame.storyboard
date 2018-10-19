@@ -12,14 +12,67 @@
         <!--Edit Game-->
         <scene sceneID="FQt-3N-94J">
             <objects>
-                <viewController id="JyM-TR-kuS" sceneMemberID="viewController">
+                <viewController id="JyM-TR-kuS" customClass="EditGameViewController" customModule="VideoGameLibraryiOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kE2-cP-zfa">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="yva-DU-wAg">
+                                <rect key="frame" x="5" y="64" width="365" height="603"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Game Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2QS-Vu-oS1">
+                                        <rect key="frame" x="0.0" y="0.0" width="365" height="100.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pKL-ic-tWx">
+                                        <rect key="frame" x="0.0" y="100.5" width="365" height="100.5"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Game Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k0p-rC-jEf">
+                                        <rect key="frame" x="0.0" y="201" width="365" height="100.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="j4e-JP-1DH">
+                                        <rect key="frame" x="0.0" y="301.5" width="365" height="100.5"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rating" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gee-gU-NHJ">
+                                        <rect key="frame" x="0.0" y="402" width="365" height="100.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Genre" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LQD-NZ-pV1">
+                                        <rect key="frame" x="0.0" y="502.5" width="365" height="100.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="yva-DU-wAg" firstAttribute="top" secondItem="gMb-jR-lN0" secondAttribute="top" id="Cke-S0-Zea"/>
+                            <constraint firstItem="gMb-jR-lN0" firstAttribute="bottom" secondItem="yva-DU-wAg" secondAttribute="bottom" id="kRL-47-fSl"/>
+                            <constraint firstItem="gMb-jR-lN0" firstAttribute="trailing" secondItem="yva-DU-wAg" secondAttribute="trailing" constant="5" id="t9A-cp-kHr"/>
+                            <constraint firstItem="yva-DU-wAg" firstAttribute="leading" secondItem="gMb-jR-lN0" secondAttribute="leading" constant="5" id="wFu-mq-HZy"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="gMb-jR-lN0"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Edit Game" id="fF7-Cb-kDu"/>
+                    <navigationItem key="navigationItem" title="Edit Game" id="fF7-Cb-kDu">
+                        <barButtonItem key="rightBarButtonItem" title="Submit" id="zo9-eE-Rwm"/>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hQd-aI-fmX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
