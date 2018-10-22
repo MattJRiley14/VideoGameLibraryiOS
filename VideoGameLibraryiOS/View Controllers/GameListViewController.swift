@@ -29,6 +29,8 @@ class GameListViewController: UITableViewController {
         if let destination = segue.destination as? EditGameViewController {
             //We need to pass through the Game that we'll be editing.
             destination.gameToEdit = currentGame
+        } else if let destination = segue.destination as? GameDetailsViewController {
+            destination.game = currentGame
         }
     }
 
@@ -36,8 +38,10 @@ class GameListViewController: UITableViewController {
         return GameManager.sharedInstance.getGameCount()
     }
     
-    override func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        currentGame = GameManager.sharedInstance.getGame(at: indexPath.row)
+        self.performSegue(withIdentifier: "showGameDetails", sender: self)
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -98,6 +102,8 @@ class GameListViewController: UITableViewController {
     
     @IBAction func unwindToGameList(segue: UIStoryboardSegue) {}
 }
+
+
 
 
 

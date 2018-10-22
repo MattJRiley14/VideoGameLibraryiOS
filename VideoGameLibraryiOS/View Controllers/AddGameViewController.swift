@@ -17,10 +17,8 @@ class AddGameViewController: UIViewController, UIPickerViewDataSource, UIPickerV
     @IBOutlet weak var gameGenrePicker: UIPickerView!
     
     //Array holding our genres
-    let genres = ["Action-Adventure", "Arcade", "Racing", "Shoot Em' Up", "Sports", "Strategy", "Third Person Shooter"]
-    
-    
-    
+    let genres = ["Action", "Action-Adventure", "Adventure", "Arcade", "Racing", "Role-Playing", "Simulation", "Sports", "Strategy"]
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -87,7 +85,14 @@ class AddGameViewController: UIViewController, UIPickerViewDataSource, UIPickerV
         
         let genre = genres[gameGenrePicker.selectedRow(inComponent: 0)]
         
-        let newGame = Game(title: title, description: gameDescription, genre: genre, rating: rating)
+        //Default initializer for the Game class. This will create a Game using the default values that were set in the Game class
+        let newGame = Game()
+        
+        //Setting the properties for the new game using dot notation
+        newGame.title = title
+        newGame.gameDescription = gameDescription
+        newGame.genre = genre
+        newGame.rating = rating
         
         GameManager.sharedInstance.addGame(game: newGame)
         

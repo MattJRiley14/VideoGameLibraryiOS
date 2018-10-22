@@ -15,7 +15,7 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="75" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="1ah-Du-yNi">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="gameCell" id="oGg-7T-aF1" customClass="GameTableViewCell" customModule="VideoGameLibraryiOS" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="75"/>
@@ -25,7 +25,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Genre" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ns3-10-w9b">
-                                            <rect key="frame" x="16" y="43" width="297" height="21"/>
+                                            <rect key="frame" x="16" y="43" width="291" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -47,9 +47,9 @@
                                             </constraints>
                                         </view>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="T" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1h5-ie-NUE">
-                                            <rect key="frame" x="321" y="43" width="16" height="21"/>
+                                            <rect key="frame" x="315" y="43" width="22" height="21"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="16" id="jWc-5b-HhS"/>
+                                                <constraint firstAttribute="width" constant="22" id="crF-7E-TJC"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
@@ -84,7 +84,6 @@
                                     <outlet property="ratingLabel" destination="1h5-ie-NUE" id="9Px-e5-bGR"/>
                                     <outlet property="statusView" destination="oda-6D-aRa" id="I6w-Uh-oeY"/>
                                     <outlet property="titleLabel" destination="fOq-82-3wo" id="3Rk-v4-vAH"/>
-                                    <segue destination="tCU-Gz-5zh" kind="show" id="McJ-Cd-ci4"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -103,6 +102,7 @@
                     <connections>
                         <outlet property="gameListTableView" destination="1ah-Du-yNi" id="iGo-M0-mp4"/>
                         <segue destination="yP2-bY-fkr" kind="show" identifier="showEditGameScreen" id="JL7-M7-lR5"/>
+                        <segue destination="tCU-Gz-5zh" kind="show" identifier="showGameDetails" id="0n6-21-ZAY"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oSl-Th-dce" userLabel="First Responder" sceneMemberID="firstResponder"/>
