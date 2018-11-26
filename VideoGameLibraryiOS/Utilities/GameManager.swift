@@ -8,6 +8,7 @@
 
 import Foundation
 import RealmSwift
+import UserNotifications
 
 class GameManager {
     //Shared instance of the GameManager class
@@ -26,7 +27,7 @@ class GameManager {
     let realm = try! Realm()
     
     //Function to get the number of games we have
-    func getGameCount () -> Int {
+    func getGameCount() -> Int {
         return gameArray.count
     }
     
@@ -68,10 +69,6 @@ class GameManager {
     }
 }
 
-
-
 /*
- 
  [Game(title: "Mario Kart", gameDescription: "A great game to play at your Grandma's house with your brothers", genre: "Racing", rating: "E"), Game(title: "Fruit Ninja", gameDescription: "A great game to play at DisneyWorld with your wife", genre: "Arcade", rating: "E"), Game(title: "EA Sports UFC", gameDescription: "A great game to play at your brother's house with your brothers", genre: "Sports", rating: "T"), Game(title: "Worms", gameDescription: "A great game to play against your brother", genre: "Strategy", rating: "E"), Game(title: "Power Pete", gameDescription: "A great game to play on your computer for your entire childhood", genre: "Action-Adventure", rating: "E"), Game(title: "Gears of War", gameDescription: "A great game to play for hours on horde mode with your brothers", genre: "Action-Adventure", rating: "M"), Game(title: "Lego: Lord of the Rings", gameDescription: "A great game to play with your wife for your birthday", genre: "Action-Adventure", rating: "E")]
- 
  */

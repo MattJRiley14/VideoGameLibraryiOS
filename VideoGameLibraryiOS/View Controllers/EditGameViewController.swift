@@ -19,7 +19,6 @@ class EditGameViewController: UIViewController, UIPickerViewDataSource, UIPicker
     //Array holding our genres
     let genres = ["Action", "Action-Adventure", "Adventure", "Arcade", "Racing", "Role-Playing", "Simulation", "Sports", "Strategy"]
     
-    
     var gameToEdit: Game!
 
     override func viewDidLoad() {
@@ -27,9 +26,45 @@ class EditGameViewController: UIViewController, UIPickerViewDataSource, UIPicker
         
         gameTitleTextField.text = gameToEdit.title
         gameDescriptionTextView.text = gameToEdit.gameDescription
-//        gameRatingSegmentedControl[] = gameToEdit.rating
-//        gameGenrePicker = gameToEdit.genre
+
+        switch gameToEdit.rating {
+        case "E":
+            gameRatingSegmentedControl.selectedSegmentIndex = 0
+        case "E10+":
+            gameRatingSegmentedControl.selectedSegmentIndex = 1
+        case "T":
+            gameRatingSegmentedControl.selectedSegmentIndex = 2
+        case "M":
+            gameRatingSegmentedControl.selectedSegmentIndex = 3
+        case "AO":
+            gameRatingSegmentedControl.selectedSegmentIndex = 4
+        default:
+            gameRatingSegmentedControl.selectedSegmentIndex = 0
+        }
         
+        switch gameToEdit.genre {
+        case "Action":
+            gameGenrePicker.selectRow(0, inComponent: 0, animated: false)
+        case "Action-Adventure":
+            gameGenrePicker.selectRow(1, inComponent: 0, animated: false)
+        case "Adventure":
+            gameGenrePicker.selectRow(2, inComponent: 0, animated: false)
+        case "Aracde":
+            gameGenrePicker.selectRow(3, inComponent: 0, animated: false)
+        case "Racing":
+            gameGenrePicker.selectRow(4, inComponent: 0, animated: false)
+        case "Role-Playing":
+            gameGenrePicker.selectRow(5, inComponent: 0, animated: false)
+        case "Simulation":
+            gameGenrePicker.selectRow(6, inComponent: 0, animated: false)
+        case "Sports":
+            gameGenrePicker.selectRow(7, inComponent: 0, animated: false)
+        case "Strategy":
+            gameGenrePicker.selectRow(8, inComponent: 0, animated: false)
+        default:
+            gameGenrePicker.selectRow(0, inComponent: 0, animated: false)
+        }
+
         // Do any additional setup after loading the view.
     }
     
