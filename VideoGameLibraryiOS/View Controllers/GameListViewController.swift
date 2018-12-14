@@ -24,6 +24,12 @@ class GameListViewController: UITableViewController {
         
         gameListTableView.reloadData()
     }
+
+    
+    
+    
+    
+    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destination = segue.destination as? EditGameViewController {
@@ -33,6 +39,14 @@ class GameListViewController: UITableViewController {
             destination.game = currentGame
         }
     }
+    
+    
+    
+
+    
+    
+    
+    
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return GameManager.sharedInstance.getGameCount()
@@ -99,11 +113,5 @@ class GameListViewController: UITableViewController {
         
         return [deleteAction, showEditScreenAction, checkOutOrInAction]
     }
-    
     @IBAction func unwindToGameList(segue: UIStoryboardSegue) {}
 }
-
-
-
-
-

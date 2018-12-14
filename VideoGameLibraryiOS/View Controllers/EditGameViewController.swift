@@ -102,7 +102,6 @@ class EditGameViewController: UIViewController, UIPickerViewDataSource, UIPicker
     
     @IBAction func submitButtonTapped(_ sender: Any) {
     
-    
         guard let title = gameTitleTextField.text, title.trimmingCharacters(in: .whitespacesAndNewlines) != "",
             let gameDescription = gameDescriptionTextView.text, gameDescription.trimmingCharacters(in: .whitespacesAndNewlines) != "" else {
                 //Show an error and return
@@ -140,5 +139,6 @@ class EditGameViewController: UIViewController, UIPickerViewDataSource, UIPicker
     }
 
 }
+
 
 
